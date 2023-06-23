@@ -1,0 +1,14 @@
+F:\C#\Notepad\Notepad\bin\Debug\Notepad.exe.config
+F:\C#\Notepad\Notepad\bin\Debug\Notepad.exe
+F:\C#\Notepad\Notepad\bin\Debug\Notepad.pdb
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.csproj.AssemblyReference.cache
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.frm_notepad.resources
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.Properties.Resources.resources
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.csproj.GenerateResource.cache
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.csproj.CoreCompileInputs.cache
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.exe
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.pdb
+F:\C#\Notepad\Notepad\bin\Debug\Guna.UI2.dll
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.frm_about.resources
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.frm_feedback.resources
+F:\C#\Notepad\Notepad\obj\Debug\Notepad.csproj.CopyComplete

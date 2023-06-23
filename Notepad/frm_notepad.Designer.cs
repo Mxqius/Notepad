@@ -456,7 +456,6 @@ namespace Notepad
             this.tsml_zoom_in,
             this.tsml_zoom_out,
             this.tsml_defult_zoom});
-            this.tsmi_zoom.Enabled = false;
             this.tsmi_zoom.Image = global::Notepad.Properties.Resources.zoom;
             this.tsmi_zoom.Name = "tsmi_zoom";
             this.tsmi_zoom.Size = new System.Drawing.Size(158, 26);
@@ -467,12 +466,14 @@ namespace Notepad
             this.tsml_zoom_in.Name = "tsml_zoom_in";
             this.tsml_zoom_in.Size = new System.Drawing.Size(187, 26);
             this.tsml_zoom_in.Text = "Zoom In";
+            this.tsml_zoom_in.Click += new System.EventHandler(this.tsml_zoom_in_Click);
             // 
             // tsml_zoom_out
             // 
             this.tsml_zoom_out.Name = "tsml_zoom_out";
             this.tsml_zoom_out.Size = new System.Drawing.Size(187, 26);
             this.tsml_zoom_out.Text = "Zoom Out";
+            this.tsml_zoom_out.Click += new System.EventHandler(this.tsml_zoom_out_Click);
             // 
             // tsml_defult_zoom
             // 
@@ -506,7 +507,7 @@ namespace Notepad
             this.tsmi_view_help.Enabled = false;
             this.tsmi_view_help.Image = global::Notepad.Properties.Resources.view_help;
             this.tsmi_view_help.Name = "tsmi_view_help";
-            this.tsmi_view_help.Size = new System.Drawing.Size(196, 26);
+            this.tsmi_view_help.Size = new System.Drawing.Size(224, 26);
             this.tsmi_view_help.Text = "View Help";
             this.tsmi_view_help.Click += new System.EventHandler(this.tsmi_view_help_Click);
             // 
@@ -514,7 +515,7 @@ namespace Notepad
             // 
             this.tsmi_send_feedback.Image = global::Notepad.Properties.Resources.feedback;
             this.tsmi_send_feedback.Name = "tsmi_send_feedback";
-            this.tsmi_send_feedback.Size = new System.Drawing.Size(196, 26);
+            this.tsmi_send_feedback.Size = new System.Drawing.Size(224, 26);
             this.tsmi_send_feedback.Text = "Send Feedback";
             this.tsmi_send_feedback.Click += new System.EventHandler(this.tsmi_send_feedback_Click);
             // 
@@ -522,7 +523,7 @@ namespace Notepad
             // 
             this.tsmi_check_updates.Image = global::Notepad.Properties.Resources.update;
             this.tsmi_check_updates.Name = "tsmi_check_updates";
-            this.tsmi_check_updates.Size = new System.Drawing.Size(196, 26);
+            this.tsmi_check_updates.Size = new System.Drawing.Size(224, 26);
             this.tsmi_check_updates.Text = "Check Updates";
             this.tsmi_check_updates.Click += new System.EventHandler(this.tsmi_check_updates_Click);
             // 
@@ -530,7 +531,7 @@ namespace Notepad
             // 
             this.tsmi_about_app.Image = global::Notepad.Properties.Resources.information;
             this.tsmi_about_app.Name = "tsmi_about_app";
-            this.tsmi_about_app.Size = new System.Drawing.Size(196, 26);
+            this.tsmi_about_app.Size = new System.Drawing.Size(224, 26);
             this.tsmi_about_app.Text = "About Notepad";
             this.tsmi_about_app.Click += new System.EventHandler(this.tsmi_about_app_Click);
             // 
@@ -542,7 +543,7 @@ namespace Notepad
             // 
             this.txt_notepad.AllowDrop = true;
             this.txt_notepad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_notepad.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_notepad.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_notepad.Location = new System.Drawing.Point(0, 28);
             this.txt_notepad.MaxLength = 100000000;
             this.txt_notepad.Multiline = true;
@@ -623,6 +624,7 @@ namespace Notepad
             this.Controls.Add(this.sts_status);
             this.Controls.Add(this.ms_header);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(296, 297);
             this.Name = "frm_notepad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

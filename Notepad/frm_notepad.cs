@@ -32,6 +32,18 @@ namespace Notepad
         public frm_notepad()
         {
             InitializeComponent();
+            txt_notepad.MouseWheel += new MouseEventHandler(txt_notepad_MouseWheel);
+        }
+
+        private void txt_notepad_MouseWheel(object sender, MouseEventArgs e)
+        {
+            // Check if the Control key is pressed and the mouse wheel is scrolled up
+            if (Control.ModifierKeys == Keys.Control && e.Delta > 0)
+            {
+                zoomIn();
+            }
+            else
+                zoomOut();
         }
 
         private void txt_notepad_DragEnter(object sender, DragEventArgs e)
@@ -430,7 +442,7 @@ namespace Notepad
         }
         private void frm_notepad_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (txt_notepad.Text == string.Empty)
+            if (txt_notepad.Text.Trim() == string.Empty)
             {
                 UpdateSetting();
                 return;
@@ -703,6 +715,27 @@ namespace Notepad
         {
             // با استفاده از کد زیر نوشته های نوت رو در page داکیومنت رسم میکند 
             e.Graphics.DrawString(txt_notepad.Text, txt_notepad.Font, Brushes.Black, 0, 0);
+        }
+
+        void zoomIn()
+        {
+            byte updatedSize = (byte)((byte)txt_notepad.Font.Size + 5);
+            txt_notepad.Font = new Font(txt_notepad.Font.FontFamily, updatedSize);
+        }
+        void zoomOut()
+        {
+
+            byte updatedSize = (byte)((byte)txt_notepad.Font.Size - 5);
+            txt_notepad.Font = new Font(txt_notepad.Font.FontFamily, updatedSize);
+        }
+        private void tsml_zoom_in_Click(object sender, EventArgs e)
+        {
+            zoomIn();
+        }
+
+        private void tsml_zoom_out_Click(object sender, EventArgs e)
+        {
+            zoomOut();
         }
     }
 }
